@@ -1,0 +1,40 @@
+/* theme color */
+//$--color-primary: #7cfff0;
+$--color-primary: #88d5f2;
+
+/* icon font path, required */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+@import "~element-ui/packages/theme-chalk/src/index";
+@import "variables";
+
+.el-textarea__inner {
+  height: 100%;
+}
+
+.el-upload.el-upload--text {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.el-upload-list--picture {
+  .el-upload-list__item {
+    margin-top: 0;
+  }
+
+  .el-upload-list__item-thumbnail {
+    height: 100%;
+    position: center;
+  }
+}
+
+.title-medium {
+  color: white;
+  font-size: 2rem;
+  font-weight: 300;
+  width: max-content;
+  margin: -1em auto 1em auto
+}

@@ -1,7 +1,8 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Home from "./views/Home.vue";
-import About from "./views/About.vue";
+import Index from "@/views/index";
+import Upload from "@/views/upload";
+import Login from "@/views/login";
 
 Vue.use(Router);
 
@@ -9,13 +10,15 @@ export default new Router({
   routes: [
     {
       path: "/",
-      name: "home",
-      component: Home
+      component: Index
     },
     {
-      path: "/about",
-      name: "about",
-      component: About
+      path: "/upload",
+      component: Upload
+    },
+    {
+      path: "/login",
+      component: Login
     }
   ]
 });
