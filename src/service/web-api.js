@@ -16,9 +16,8 @@ import axios from "axios";
  * @property {number} timestamp
  */
 const dayUpAxios = axios.create({
-  // baseURL: "http://47.98.190.65:8080/daydayup/"
-  // baseURL: "http://localhost:8079/daydayup/"
-  baseURL: "http://localhost:8079/daydayup",
+  baseURL: "http://47.98.190.65:8080/daydayup/",
+  // baseURL: "http://localhost:8079/daydayup",
   withCredentials: true
 });
 

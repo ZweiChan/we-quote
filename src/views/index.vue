@@ -26,12 +26,12 @@
 </template>
 
 <script>
-    import WeQuote from "@/components/we-quote";
-    import WePlayer from "@/components/we-player";
-    import {ADD_WORD, DISLIKE_A_WORD, LIKE_A_WORD} from "@/data/mutation-types";
-    import {getQuotes, likeAQuote} from "@/service/web-api";
+  import WeQuote from "@/components/we-quote";
+  import WePlayer from "@/components/we-player";
+  import {ADD_WORD, DISLIKE_A_WORD, LIKE_A_WORD} from "@/data/mutation-types";
+  import {getQuotes, likeAQuote} from "@/service/web-api";
 
-    const switchInterval = 3000;
+  const switchInterval = 3000;
 
     export default {
         name: "index",
@@ -97,9 +97,11 @@
                         likes: quote.praise,
                         liked: false
                     };
-                    this.$store.commit(ADD_WORD, card);
+                  this.$store.commit(ADD_WORD, card);
                 });
-            })
+                this.$store.commit("removeFirst");
+              }
+            )
         }
     };
 </script>

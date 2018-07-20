@@ -11,14 +11,14 @@ export default new Vuex.Store({
       username: null,
     },
     quotes: [
-      // {
-      //   id: 1,
-      //   phrase: "",
-      //   author: "",
-      //   imageUrl: "",
-      //   likes: 0,
-      //   liked: false
-      // }
+      {
+        id: 1,
+        phrase: "载入中",
+        author: "载入中",
+        imageUrl: "",
+        likes: 0,
+        liked: false
+      }
     ]
   },
   mutations: {
@@ -45,6 +45,9 @@ export default new Vuex.Store({
       let quote = state.quotes.find(quote => quote.id === likedWordId);
       quote.liked = false;
       quote.likes -= 1;
+    },
+    removeFirst(state){
+      state.quotes.shift()
     }
   },
   getters: {

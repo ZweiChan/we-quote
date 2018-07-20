@@ -36,10 +36,8 @@
         //检查是否存在session
         let u = localStorage.getItem("username");
         if (u !=null) {
-          //TODO 未登录状态 抽屉菜单 显示登录/注册 不显示用户名和退出登录 进入个人中心/上传界面则跳转到登录页
           this.$store.commit("login", u)
         } else {
-          //TODO 登录状态 抽屉菜单 不显示登录/注册 显示用户名和退出登录
         }
       }
     },
